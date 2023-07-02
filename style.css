@@ -1,0 +1,77 @@
+:root {
+  --time-duration: 9s;
+}
+
+body {
+  margin: 0px;
+  background-color: black;
+}
+
+body::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+h3 {
+  margin: 0px;
+}
+
+/* firsr rod */
+#rod-one {
+  position: absolute;
+  top: 0%;
+  background-color: rgb(38, 0, 255);
+  border: none;
+  width: 25vw;
+  box-sizing: border-box;
+  border-radius: 12px;
+  height: 5vh;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* second rod */
+#rod-two {
+  position: absolute;
+  bottom: 0%;
+  background-color: rgb(255, 0, 0);
+  border-radius: 12px;
+  border: none;
+  width: 25vw;
+  box-sizing: border-box;
+  height: 5vh;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* ball */
+#ball {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  border-radius: 50%;
+  background-image: radial-gradient(rgb(255, 255, 255) 0%, black 201%);
+  box-sizing: border-box;
+}
+
+/******************************  Animation ************************** */
+.animate-top-right {
+  transition: transform linear var(--time-duration);
+  transform: translateX(2000px) translateY(-2000px);
+}
+
+.animate-bottom-right {
+  transition: transform linear var(--time-duration);
+  transform: translateX(2000px) translateY(2000px);
+}
+
+.animate-top-left {
+  transition: transform linear var(--time-duration);
+  transform: translateX(-2000px) translateY(-2000px);
+}
+
+.animate-bottom-left {
+  transition: transform linear var(--time-duration);
+  transform: translateX(-2000px) translateY(2000px);
+}
